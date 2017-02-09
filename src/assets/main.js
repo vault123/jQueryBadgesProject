@@ -11,7 +11,9 @@ $(function () {
                 var title = $('<h3>'+ course.title+'</h3>');
                 var badgeImg = course.badge;
                 var img = $("<img src="+badgeImg+">");
-                var done = div.append(title).append(img);
+                var url = course.url;
+                var btn = $('<a href='+url+' target="_blank" class="btn btn-primary">See Course</a>');
+                var done = div.append(title).append(img).append(btn);
                 badges.append(done);
             })
 
